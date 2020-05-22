@@ -57,13 +57,14 @@ class Game {
         for(var plr in allPlayers){
           index = index + 1 ;
           
-          playerSprites[index-1].x = allPlayers[plr].position.x;
-          playerSprites[index-1].y = allPlayers[plr].position.y;
-          //player.x=  playerSprites[index-1].x;
-          //player.y = playerSprites[index-1].y;
-
+          //playerSprites[index-1].x = allPlayers[plr].position.x;
+          //playerSprites[index-1].y = allPlayers[plr].position.y;
+          
           if (index === player.index){
             playerSprites[index - 1].shapeColor = "red";
+              player.x=  playerSprites[index-1].x;
+          player.y = playerSprites[index-1].y;
+
             camera.position.x = playerSprites[index-1].x;
             camera.position.y = playerSprites[index-1].y;
           }
